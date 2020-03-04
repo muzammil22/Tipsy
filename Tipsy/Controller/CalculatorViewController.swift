@@ -55,7 +55,20 @@ class CalculatorViewController: UIViewController {
             let result = billTotal * (1+tip)/Double(numberOfPeople)
             
             let resultTo2DecimalPlaces = String(format: "%.2f", result)
+            
+            performSegue(withIdentifier: "goToResult", sender: CalculatorViewController())
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//           // Get the new view controller using segue.destination.
+//           // Pass the selected object to the new view controller.
+//        if segue.identifier == "goToResult" {
+//           let destinationVC = segue.destination as! ResultViewController
+////           destinationVC.bmiValue = calculatorBrain.getBMIValue()
+////           destinationVC.advice = calculatorBrain.getAdvice()
+////           destinationVC.color = calculatorBrain.getColor()
+//       }
+//    }
 }
 
